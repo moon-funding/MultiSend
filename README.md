@@ -19,6 +19,6 @@ By using 1 Gwei gas price, we only pay 0,0031 ETH ($2 at the time of writing).
 
 That way, transfers are not almost instant but they usually take between 30 minutes and a few hours. We just need to wait until there is a 39% empty space with a >=1 Gwei price in a block so we can jump in.
 
-### Payment Proofs
+## Payment Proofs
 You can see our payment proofs at https://moonfunding.com/payment-proofs/
 
