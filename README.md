@@ -3,7 +3,7 @@
 ## Problem
 Private individuals usually make a few transactions, so they don't have any kind of problems with blockchain.
 
-However, Moon Funding company had the need to make hundreds of transactions every single day. And making hundreds of them on a one by one basis would take an eternity in terms of time.
+However, Moon Funding LTD needed to make hundreds of transactions every single day. And making hundreds of them on a one by one basis would consume a lot of time.
 
 ## Solution
 We use that smart contract to send payments to our users in groups of ~100 instead of one by one. 
