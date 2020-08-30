@@ -3,22 +3,41 @@
 ## Problem
 Private individuals usually make a few transactions, so they don't have any kind of problems with blockchain.
 
-However, Moon Funding LTD needed to make hundreds of transactions every single day. And making hundreds of them on a one by one basis would consume a lot of time.
+However, Moon Funding LTD needed to make hundreds of transactions every single day. And making hundreds of them on a one by one basis would consume a lot of time and money.
 
 ## Solution
 We use that smart contract to send payments to our users in groups of ~100 instead of one by one. 
 
+## Benefits
+- We cut transfer fees and costs by 95%
+- We reduce human resources needed to process transfers.
+
 ## Why ~100 and not more?
-We have that number limitation because if we sent everything at the same time, we would fill entire blocks of the ETH blockchain, thus making it slower and more expensive for all the community.
+### Short answer
+It reduces the company transfer fees and costs by 87.5%.
 
-Sending transactions in blocks of ~100 consumes on average 3,1 million of gas limit and every block has a ~8 million capacity. So we use 39% of block space in every transaction.
-We would have to pay 0,062 ETH transaction fee at average price ($41 at the time of writing) using a 20 Gwei gas price.
+Sending more than 100 transfers at once would be more expensive for the company.
+### Long answer
+In the ethereum blockchain, for transfers to be confirmed they need to be included into a "block".
 
-So, we use https://ethgasstation.info/ to pay less transaction fees while making fast payments to our customers. 
-By using 1 Gwei gas price, we only pay 0,0031 ETH ($2 at the time of writing). 
+Each block has a capacity of ~8 million gas and by sending 100 transactions at once with this contract, we spend ~3,1 million gas.
 
-That way, transfers are not almost instant but they usually take between 30 minutes and a few hours. We just need to wait until there is a 39% empty space with a >=1 Gwei price in a block so we can jump in.
+That means that we fill 39% of an entire block.
+
+If we chose to fill a 100% of the block, we could make faster payments but it would be by far more costly as we would need to pay the biggest fee in the market.
+
+However, if we only fill a smaller percentage of the block we can compete in gas prices and therefore we are able to reduce costs by 87.5% in average.
+
+| Number of transfers | % of block filled |  Gas Price |  Tranfer Fee (ETH) | Tranfer Fee (USD) | Cost per transfer (USD) |
+| -------------| ------------- | ------------- | ------------- | ------------- |  ------------- | 
+| 256 | 100%  | 20 Gwei  | 0,1589 ETH | $105 | $0.41
+| 100 | 39%  | 1 Gwei  | 0,0031 ETH | $2  | $0.02
+* Data as of 2018, when this smart contract was coded.
+
+## Conclusion
+Instead of sending transfers in bulks of 256, we send them in bulks of 100 which is by far more efficient economically speaking.
+
+If we want to send 256 payments, we would send out 2 bulks of 100 transfers and 1 bulk of 56 (or what is the same -> 3 bulks of 85 [256/3] transfers) and that would cost $5,12 in fees instead of $41 (a 87.5% decrease in fees)
 
 ## Payment Proofs
 You can see our payment proofs at https://moonfunding.com/payment-proofs/
-
