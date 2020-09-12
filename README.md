@@ -14,7 +14,7 @@ We use that smart contract to send payments to our users in groups of ~100 inste
 
 ## Why ~100 and not more?
 ### Short answer
-It reduces the company transfer fees and costs by 87.5%.
+It reduces the company transfer fees and costs by 95%.
 
 Sending more than 100 transfers at once would be more expensive for the company.
 ### Long answer
@@ -26,9 +26,9 @@ That means that we fill 39% of an entire block.
 
 If we chose to fill a 100% of the block, we could make faster payments but it would be by far more costly as we would need to pay the biggest fee in the market.
 
-However, if we only fill a smaller percentage of the block we can compete in gas prices and therefore we are able to reduce costs by 87.5% in average.
+However, if we only fill a smaller percentage of the block we can compete in gas prices and therefore we are able to reduce costs by 95% in average.
 
-| Number of transfers | % of block filled |  Gas Price |  Tranfer Fee (ETH) | Tranfer Fee (USD) | Cost per transfer (USD) |
+| Number of transfers | % of block filled |  Gas Price |  Total Tranfer Fee (ETH) | Total Tranfer Fee (USD) | Cost per transfer (USD) |
 | -------------| ------------- | ------------- | ------------- | ------------- |  ------------- | 
 | 256 | 100%  | 20 Gwei  | 0,1589 ETH | $105 | $0.41
 | 100 | 39%  | 1 Gwei  | 0,0031 ETH | $2  | $0.02
@@ -37,7 +37,7 @@ However, if we only fill a smaller percentage of the block we can compete in gas
 ## Conclusion
 Instead of sending transfers in bulks of 256, we send them in bulks of 100 which is by far more efficient economically speaking.
 
-If we want to send 256 payments, we would send out 2 bulks of 100 transfers and 1 bulk of 56 (or what is the same -> 3 bulks of 85 [256/3] transfers) and that would cost $5,12 in fees instead of $41 (a 87.5% decrease in fees)
+If we want to send 256 payments, we would send out 2 bulks of 100 transfers and 1 bulk of 56 (or what is the same -> 3 bulks of 85 [256/3] transfers) and that would cost $5,12 in fees instead of $105 (a 95% decrease in fees)
 
 ## Payment Proofs
 You can see our payment proofs at https://moonfunding.com/payment-proofs/
